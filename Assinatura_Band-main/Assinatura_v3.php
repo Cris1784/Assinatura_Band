@@ -51,17 +51,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mostrarCelular = isset($_POST['mostrarCelular']);
     $novoCelular = $_POST['novoCelular'] ?? '';
     $arquivoCSV = 'BD_Assinatura_Band2.csv';
-    
+
     if (!str_ends_with(strtolower($emailCorporativo), '@band.com.br')) {
         $erro = "O e-mail fornecido é inválido. Deve conter o domínio @band.com.br.";
     } else {
+  
         $dados = buscarDadosPorEmail($emailCorporativo, $arquivoCSV);
-        
+
         if (empty($dados)) {
             $erro = "Não foram encontrados dados correspondentes ao e-mail fornecido.";
+        } elseif ($mostrarCelular && empty($dados['celular']) && empty($novoCelular)) {
+
+            $erro = "Erro: Por favor, insira o celular ou utilize um número existente.";
         }
     }
 }
+
 
 ?>
 
@@ -118,13 +123,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <button class="btn_gerar" type="submit">GERAR ASSINATURA</button>
             
     
-            <?php if ($mostrarCelular && !empty($dados['celular'])): ?>
+            <?php if ($mostrarCelular): ?>
                 <div class="opcao-novo-celular">
-                    <label for="novoCelular">Celular Atual: <?= htmlspecialchars(formatarTelefone($dados['celular'])) ?></label><br>
+                     <?php if (!empty($dados['celular'])): ?>
+                        <label for="novoCelular">Celular Atual: <?= htmlspecialchars(formatarTelefone($dados['celular'])) ?></label><br>
+                     <?php else: ?>
+                    <?php endif; ?>
                     <label for="novoCelular">Novo Celular (deixe em branco para usar o atual):</label>
                     <input type="text" name="novoCelular" id="novoCelular" value="<?= htmlspecialchars($novoCelular) ?>">
                 </div>
             <?php endif; ?>
+
             </div>        
         <br>
     </div>
