@@ -1,0 +1,191 @@
+html, body {
+    height: 100%;
+    background-color:floralwhite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.box {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px; 
+    max-width: 1300px; 
+    margin: 20px auto; 
+    background-color: rgb(2, 4, 75); 
+    border: 7px solid #ccc; 
+    border-radius: 60px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    justify-content: center;
+    height: 300px;
+}
+
+
+.input-container {
+    display: flex;
+}
+
+input[type="email"],
+input[type="text"]{
+    width:500px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, border-color 0.3s;
+    text-align: center;
+    font-size: large;
+}
+
+#mostrarCelular{
+    width: 17px; 
+    height: 17px; 
+    border: 2px solid #ccc; 
+    margin-right: 0px; 
+    border-radius: 10px; 
+    position: relative;
+    cursor: pointer;
+}
+
+.label-custom {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    margin-bottom: 5px; 
+}
+
+.main-content {
+    flex: 1;
+}
+
+
+.btn_gerar {
+    cursor: pointer;
+    background-color: #5cbceb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-left: 41%;
+    font-weight: bolder;
+}
+
+.btn_gerar:hover {
+    background-color: #ffffff;
+    color: #5cbceb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.opcao-novo-celular{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+.erro {
+    margin: 20px auto; 
+    color: #D8000C; /* Vermelho escuro para o texto */
+    background-color: #FFBABA; /* Fundo vermelho claro */
+    border: 1px solid #D8000C; /* Borda vermelha escura */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Arredondamento nos cantos */
+    font-weight: bold; /* Negrito no texto */
+    margin-top: 10px; /* Espaçamento superior */
+    max-width: 400px; /* Limita a largura da mensagem */
+    text-align: center; /* Centraliza o texto */
+}
+
+.dados {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 0.6rem;
+    font-size: 1.6rem; /* ou use 1.2em para ser mais responsivo */
+    margin-left: 5%; /* ajusta conforme a largura da tela */
+    color: rgb(2, 4, 75);
+    width: 90%; /* usa 90% da largura do contêiner pai */
+    max-width: 600px; /* mantém a largura máxima */
+    box-sizing: border-box; /* inclui padding e border na largura total */
+}
+.input-conteiner{
+    display: flex;
+    justify-content: center;
+}
+
+.coluna{
+    height: 200px;
+    width: 48%;
+    padding: 10px;
+    margin-right: 20rem;
+}
+
+.imagem-assinatura{
+    margin-top: 1rem;
+    width: 60rem
+}
+
+.bnt-download {
+    cursor: pointer;
+    background-color: #5cbceb;
+    color: white;
+    border: none;
+    font-weight: bolder;
+    padding: 20px 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-left: 40%;
+    margin-top: 30px;
+}
+
+.bnt-download:hover {
+    background-color: #ffffff;
+    color: #5cbceb;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+#nome{
+    font-weight: bold;
+}
+
+.btn-download{
+    width: 2rem;
+    margin-bottom: 0;
+
+}
+
+footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(2, 4, 75);
+    color: aliceblue !important;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.5;
+    margin-top: 1px;
+}
+
+.logo_band {
+    width: 6rem; 
+    margin-right: 2rem;
+}
+
+.logo_bandnews {
+    width: 7rem; 
+    margin-right: 2rem; 
+}
+
+.logo_rb {
+    width: 6rem; 
+}
